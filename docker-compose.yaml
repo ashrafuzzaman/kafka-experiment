@@ -4,10 +4,8 @@ services:
     image: ashrafuzzaman/kafka:0.10
     ports:
       - "9092:9092"
-    volumes:
-        - './config:/etc/config'
     environment:
-        CONFIG_FILE_PATH: /etc/config/kafka.properties
+        ZK_CONNECTION: zookeeper:2181
     links:
       - zookeeper
   zookeeper:
