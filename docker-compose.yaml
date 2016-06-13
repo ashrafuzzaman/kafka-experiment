@@ -1,5 +1,13 @@
 version: '2'
 services:
+  read_stream:
+    build: ./new_data
+    environment:
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_SECRET: ${TWITTER_CONSUMER_SECRET}
+      TWITTER_ACCESS_TOKEN_KEY: ${TWITTER_ACCESS_TOKEN_KEY}
+      TWITTER_ACCESS_TOKEN_SECRET: ${TWITTER_ACCESS_TOKEN_SECRET}
+    command: npm start
   kafka:
     image: ashrafuzzaman/kafka:0.10
     ports:
