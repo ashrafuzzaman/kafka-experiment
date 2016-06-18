@@ -8,8 +8,8 @@ services:
       TWITTER_ACCESS_TOKEN_KEY: ${TWITTER_ACCESS_TOKEN_KEY}
       TWITTER_ACCESS_TOKEN_SECRET: ${TWITTER_ACCESS_TOKEN_SECRET}
     command: npm start
-    depends_on:
-      - kafka
+    links:
+      - kafka:kafka
   kafka:
     image: ashrafuzzaman/kafka:0.10
     ports:

@@ -1,4 +1,4 @@
-FROM ashrafuzzaman/alpin-node:6
+FROM ashrafuzzaman/node:6-alpine
 
 RUN mkdir /code
 WORKDIR /code
